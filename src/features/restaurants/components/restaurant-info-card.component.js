@@ -1,4 +1,6 @@
+import React from "react";
 import { SvgXml } from "react-native-svg";
+
 import { Spacer } from "../../../spacer/spacer.component";
 import { Text } from "../../../typography/text.component"; 
 
@@ -17,7 +19,7 @@ import {
     Icon
 } from './restaurant-info-card-styles';
 
-export default function RestaurantInfoCard ({ restaurant = {} }) {
+export const RestaurantInfoCard = ({ restaurant = {} }) => {
     const {
         name = 'Some Restaurants',
         icon = "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
