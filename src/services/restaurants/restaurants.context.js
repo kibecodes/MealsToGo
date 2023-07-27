@@ -37,7 +37,11 @@ export const RestaurantsContextProvider = ({ children }) => {
 
     return (
             <RestaurantsContext.Provider 
-                value={{ restaurants, isLoading, error }}
+                value={{ 
+                    restaurants, 
+                    isLoading, 
+                    error 
+                }}
             >
                 {children}
             </RestaurantsContext.Provider>

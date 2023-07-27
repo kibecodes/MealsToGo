@@ -5,11 +5,12 @@ import { ActivityIndicator, MD2Colors } from 'react-native-paper';
 
 
 import { SafeArea } from '../../../components/utility/safe-area.component';
-import { RestaurantInfoCard } from '../components/restaurant-info-card.component';
 import { Spacer } from '../../../components/spacer/spacer.component';
 
 import { RestaurantsContext } from '../../../services/restaurants/restaurants.context';
+
 import { Search } from '../components/search.component';
+import { RestaurantInfoCard } from '../components/restaurant-info-card.component';
 
 const RestaurantList = styled(FlatList).attrs({
     contentContainerStyle: {
@@ -44,7 +45,12 @@ export const RestaurantsScreen = ({ navigation }) => {
                     data={restaurants}
                     renderItem={({ item }) => {
                         return (
-                            <TouchableOpacity onPress={() => navigation.navigate("RestaurantDetail", { restaurant: item, })}>
+                            <TouchableOpacity 
+                                onPress={() => 
+                                    navigation.navigate("RestaurantDetail", {
+                                        restaurant: item, 
+                                    }
+                                )}>
                                 <Spacer position="bottom" size="large">
                                     <RestaurantInfoCard restaurant={item}/>
                                 </Spacer>
