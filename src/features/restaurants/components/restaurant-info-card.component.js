@@ -6,6 +6,7 @@ import { Text } from "../../../components/typography/text.component";
 
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
+import { Favourite } from '../../../components/favourites/favourite.component'
 
 import { 
     RestaurantCard,  
@@ -36,6 +37,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     return (
         <RestaurantCard elevation={5}>
             <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
+            <Favourite restaurant={restaurant} />
                 <Info>
                 <Text variant="label">{name}</Text>
                 <Section>
