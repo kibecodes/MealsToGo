@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react';
-import * as firebase from 'firebase/app';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 import { loginRequest } from './authentication.service';
 
@@ -14,22 +14,42 @@ export const AuthenticationContextProvider = ({ children}) => {
         setIsLoading(true);
         loginRequest(email, password)
             .then((u) => {
-                setIsLoading(false);
                 setUser(u);
+                setIsLoading(false);
         })  .catch((e) => {
                 setIsLoading(false);
-                setError(true);
+                setError(e);
+        });
+    };
+
+    const onRegister = (email, password, repeatedPassword) => {
+        setIsLoading(true);
+        if(password !== repeatedPassword) {
+            setError("Error: Passwords do not match");
+            return;
+        }
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((u) => {
+            setUser(u);
+            setIsLoading(false);
+        })
+        .catch((e) => {
+            setIsLoading(false)
+            setError(e.toString());
         });
     };
 
     return(
         <AuthenticationContext.Provider
             value={{
+                isAuthenticated: !!user,
                 user,
                 isLoading,
                 error,
                 onLogin,
-            }}
+                onRegister,
+            }} 
         >
             {children}
         </AuthenticationContext.Provider>
