@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
 import { ActivityIndicator, MD2Colors } from 'react-native-paper';
 
 
+import { FadeInView } from '../../../components/animations/fade.animations';
 import { SafeArea } from '../../../components/utility/safe-area.component';
 import { Spacer } from '../../../components/spacer/spacer.component';
-import { FavouritesBar} from '../../../components/favourites/favourites-bar.component';
+import { FavouritesBar } from '../../../components/favourites/favourites-bar.component';
 
 import { RestaurantsContext } from '../../../services/restaurants/restaurants.context';
 import { FavouritesContext } from '../../../services/favourites/favourites.context';
@@ -14,11 +15,7 @@ import { FavouritesContext } from '../../../services/favourites/favourites.conte
 import { Search } from '../components/search.component';
 import { RestaurantInfoCard } from '../components/restaurant-info-card.component';
 
-const RestaurantList = styled(FlatList).attrs({
-    contentContainerStyle: {
-        padding: 16,
-    },
-})``;
+import { RestaurantList } from '../components/restaurant-list.styles'
 
 const Loading = styled(ActivityIndicator)`
     margin-left: -25px;
@@ -31,8 +28,8 @@ const LoadingContainer = styled.View`
 
 export const RestaurantsScreen = ({ navigation }) => {
     const { restaurants, isLoading } = useContext(RestaurantsContext);
-    const [isToggled, setIsToggled] = useState(false);
     const { favourites } = useContext(FavouritesContext);
+    const [isToggled, setIsToggled] = useState(false);
 
     return(
         <SafeArea>
@@ -61,7 +58,9 @@ export const RestaurantsScreen = ({ navigation }) => {
                                     }
                                 )}>
                                 <Spacer position="bottom" size="large">
-                                    <RestaurantInfoCard restaurant={item}/>
+                                    <FadeInView>
+                                        <RestaurantInfoCard restaurant={item}/>
+                                    </FadeInView>
                                 </Spacer>
                             </TouchableOpacity>
                         );
@@ -69,6 +68,7 @@ export const RestaurantsScreen = ({ navigation }) => {
                     keyExtractor={(item) => item.name}
                 />
         </SafeArea>
+
     );
 };
 
