@@ -1,0 +1,327 @@
+[debug] [2023-08-01T16:20:34.771Z] ----------------------------------------------------------------------
+[debug] [2023-08-01T16:20:34.775Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2023-08-01T16:20:34.775Z] CLI Version:   12.4.6
+[debug] [2023-08-01T16:20:34.776Z] Platform:      win32
+[debug] [2023-08-01T16:20:34.776Z] Node Version:  v18.12.1
+[debug] [2023-08-01T16:20:34.778Z] Time:          Tue Aug 01 2023 19:20:34 GMT+0300 (East Africa Time)
+[debug] [2023-08-01T16:20:34.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-08-01T16:20:34.922Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-08-01T16:20:34.923Z] > authorizing via signed-in user (jonkibet019@gmail.com)
+[debug] [2023-08-01T16:20:34.924Z] [iam] checking project mealstogo-96a1f for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-08-01T16:20:34.928Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions [none]
+[debug] [2023-08-01T16:20:34.928Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:34.929Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-08-01T16:20:36.727Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions 200
+[debug] [2023-08-01T16:20:36.728Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-08-01T16:20:36.729Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/mealstogo-96a1f/serviceAccounts/mealstogo-96a1f@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-08-01T16:20:36.730Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/mealstogo-96a1f/serviceAccounts/mealstogo-96a1f@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-08-01T16:20:38.349Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/mealstogo-96a1f/serviceAccounts/mealstogo-96a1f@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-08-01T16:20:38.350Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/mealstogo-96a1f/serviceAccounts/mealstogo-96a1f@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'mealstogo-96a1f'...
+[info] 
+[info] i  deploying functions 
+[debug] [2023-08-01T16:20:38.364Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f [none]
+[debug] [2023-08-01T16:20:38.875Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f 200
+[debug] [2023-08-01T16:20:38.876Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f {"projectId":"mealstogo-96a1f","projectNumber":"178224886437","displayName":"MealsToGo","name":"projects/mealstogo-96a1f","resources":{"hostingSite":"mealstogo-96a1f"},"state":"ACTIVE","etag":"1_71532c46-290b-4600-979a-0173bc81f8e9"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-08-01T16:20:38.914Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-08-01T16:20:38.914Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:38.922Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-08-01T16:20:38.922Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:38.925Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudbuild.googleapis.com [none]
+[debug] [2023-08-01T16:20:38.925Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudbuild.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:38.928Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/artifactregistry.googleapis.com [none]
+[debug] [2023-08-01T16:20:38.928Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/artifactregistry.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:40.811Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/runtimeconfig.googleapis.com 200
+[debug] [2023-08-01T16:20:40.812Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-08-01T16:20:40.819Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudbuild.googleapis.com 200
+[debug] [2023-08-01T16:20:40.820Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-08-01T16:20:40.829Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudfunctions.googleapis.com 200
+[debug] [2023-08-01T16:20:40.831Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-08-01T16:20:40.840Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/artifactregistry.googleapis.com 200
+[debug] [2023-08-01T16:20:40.840Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-08-01T16:20:40.842Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f/adminSdkConfig [none]
+[debug] [2023-08-01T16:20:41.348Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f/adminSdkConfig 200
+[debug] [2023-08-01T16:20:41.350Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f/adminSdkConfig {"projectId":"mealstogo-96a1f","storageBucket":"mealstogo-96a1f.appspot.com"}
+[debug] [2023-08-01T16:20:41.354Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mealstogo-96a1f/configs [none]
+[debug] [2023-08-01T16:20:42.101Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mealstogo-96a1f/configs 200
+[debug] [2023-08-01T16:20:42.102Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mealstogo-96a1f/configs {}
+[debug] [2023-08-01T16:20:42.106Z] Validating nodejs source
+[debug] [2023-08-01T16:20:52.159Z] checkFunctionsSDKVersion was unable to fetch information from NPM Error: spawnSync C:\Windows\system32\cmd.exe ETIMEDOUT
+    at Object.spawnSync (node:internal/child_process:1110:20)
+    at Object.spawnSync (node:child_process:857:24)
+    at Function.spawnSync [as sync] (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\cross-spawn\index.js:26:23)
+    at Object.getLatestSDKVersion (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:54:25)
+    at Object.checkFunctionsSDKVersion (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\versioning.js:74:32)
+    at Delegate.validate (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\index.js:84:20)
+    at loadCodebases (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\prepare.js:294:31)
+    at async prepare (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\functions\prepare.js:55:24)
+    at async chain (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\index.js:38:9)
+    at async deploy (C:\Users\pc\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\deploy\index.js:95:5)
+[debug] [2023-08-01T16:20:52.160Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2023-08-01T16:20:52.161Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2023-08-01T16:20:52.207Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-08-01T16:20:52.255Z] Found firebase-functions binary at 'D:\projects\MealsToGo\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8064
+
+[debug] [2023-08-01T16:20:53.630Z] Got response from /__/functions.yaml {"endpoints":{"geocode":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"geocode"},"placesNearby":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"placesNearby"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged D:\projects\MealsToGo\functions (54.5 KB) for uploading 
+[debug] [2023-08-01T16:20:53.858Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/mealstogo-96a1f/locations/-/functions [none]
+[debug] [2023-08-01T16:20:54.753Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/mealstogo-96a1f/locations/-/functions 200
+[debug] [2023-08-01T16:20:54.753Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/mealstogo-96a1f/locations/-/functions {}
+[debug] [2023-08-01T16:20:54.755Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-08-01T16:20:55.994Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/-/functions 200
+[debug] [2023-08-01T16:20:55.995Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2023-08-01T16:20:56.008Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/run.googleapis.com [none]
+[debug] [2023-08-01T16:20:56.008Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/run.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:56.015Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/eventarc.googleapis.com [none]
+[debug] [2023-08-01T16:20:56.015Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/eventarc.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:56.018Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/pubsub.googleapis.com [none]
+[debug] [2023-08-01T16:20:56.019Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/pubsub.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:56.022Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/storage.googleapis.com [none]
+[debug] [2023-08-01T16:20:56.023Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/storage.googleapis.com x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:20:57.664Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/storage.googleapis.com 200
+[debug] [2023-08-01T16:20:57.666Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2023-08-01T16:20:57.685Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/pubsub.googleapis.com 200
+[debug] [2023-08-01T16:20:57.685Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2023-08-01T16:20:57.688Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/eventarc.googleapis.com 200
+[debug] [2023-08-01T16:20:57.688Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2023-08-01T16:20:57.806Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/run.googleapis.com 200
+[debug] [2023-08-01T16:20:57.807Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mealstogo-96a1f/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2023-08-01T16:20:57.811Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/178224886437/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-08-01T16:20:57.816Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/178224886437/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2023-08-01T16:20:59.646Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/178224886437/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2023-08-01T16:20:59.647Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/178224886437/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-178224886437@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"114355451104671006748"}}
+[debug] [2023-08-01T16:20:59.864Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/178224886437/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2023-08-01T16:20:59.865Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/178224886437/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-178224886437@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"115387031399444028036"}}
+[debug] [2023-08-01T16:20:59.880Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f [none]
+[debug] [2023-08-01T16:21:00.546Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f 200
+[debug] [2023-08-01T16:21:00.547Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mealstogo-96a1f {"projectId":"mealstogo-96a1f","projectNumber":"178224886437","displayName":"MealsToGo","name":"projects/mealstogo-96a1f","resources":{"hostingSite":"mealstogo-96a1f"},"state":"ACTIVE","etag":"1_71532c46-290b-4600-979a-0173bc81f8e9"}
+[debug] [2023-08-01T16:21:00.550Z] [functions] found 2 new HTTP functions, testing setIamPolicy permission...
+[debug] [2023-08-01T16:21:00.551Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions [none]
+[debug] [2023-08-01T16:21:00.551Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions x-goog-quota-user=projects/mealstogo-96a1f
+[debug] [2023-08-01T16:21:00.551Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-08-01T16:21:02.076Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions 200
+[debug] [2023-08-01T16:21:02.077Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mealstogo-96a1f:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2023-08-01T16:21:02.078Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2023-08-01T16:21:02.084Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-08-01T16:21:03.171Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-08-01T16:21:03.173Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-178224886437-us-central1/529c1912-d059-451e-844d-5fa08eb651c8.zip?GoogleAccessId=service-178224886437@gcf-admin-robot.iam.gserviceaccount.com&Expires=1690908664&Signature=PU21NnUtH5QkMmvwWIliQujfRciVAwmRsxbxlGno35zi7d3bsxeYzKU5aZ6vft%2BXYFdOCE2gLB3uU78GSu9DOzSmqcuvb%2BriX6G33tSMl0R6uzBmoAGfBn2aw%2BemMYmz9kJv3WCJ4%2BhxZ%2B0FR5J6ae8OkESFqg7YTNMb3fI7c5pQZkxrn3RLbkmy5CTNEM0DC43cPEJv%2BV7DkTXm9rTs%2FuukB4OWO4%2B%2Bnu224PABnlimCWW%2F2ofDqL7RVRyuvLykLCyiTfimMBnX2ezkaqXZfeMPIAghtG1EkI%2FeC5cRdx1%2BgLREa4eJ2B06pKxMsNMLbmhd%2BcSVZfgLuRU0HKJdNA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-178224886437-us-central1","object":"529c1912-d059-451e-844d-5fa08eb651c8.zip"}}
+[debug] [2023-08-01T16:21:03.181Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-178224886437-us-central1/529c1912-d059-451e-844d-5fa08eb651c8.zip GoogleAccessId=service-178224886437%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1690908664&Signature=PU21NnUtH5QkMmvwWIliQujfRciVAwmRsxbxlGno35zi7d3bsxeYzKU5aZ6vft%2BXYFdOCE2gLB3uU78GSu9DOzSmqcuvb%2BriX6G33tSMl0R6uzBmoAGfBn2aw%2BemMYmz9kJv3WCJ4%2BhxZ%2B0FR5J6ae8OkESFqg7YTNMb3fI7c5pQZkxrn3RLbkmy5CTNEM0DC43cPEJv%2BV7DkTXm9rTs%2FuukB4OWO4%2B%2Bnu224PABnlimCWW%2F2ofDqL7RVRyuvLykLCyiTfimMBnX2ezkaqXZfeMPIAghtG1EkI%2FeC5cRdx1%2BgLREa4eJ2B06pKxMsNMLbmhd%2BcSVZfgLuRU0HKJdNA%3D%3D
+[debug] [2023-08-01T16:21:03.181Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-178224886437-us-central1/529c1912-d059-451e-844d-5fa08eb651c8.zip [stream]
+[debug] [2023-08-01T16:21:05.047Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-178224886437-us-central1/529c1912-d059-451e-844d-5fa08eb651c8.zip 200
+[debug] [2023-08-01T16:21:05.048Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-178224886437-us-central1/529c1912-d059-451e-844d-5fa08eb651c8.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function geocode(us-central1)... 
+[info] i  functions: creating Node.js 18 (2nd Gen) function placesNearby(us-central1)... 
+[debug] [2023-08-01T16:21:05.091Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions functionId=geocode
+[debug] [2023-08-01T16:21:05.091Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions {"name":"projects/mealstogo-96a1f/locations/us-central1/functions/geocode","buildConfig":{"runtime":"nodejs18","entryPoint":"geocode","source":{"storageSource":{"bucket":"gcf-v2-uploads-178224886437-us-central1","object":"529c1912-d059-451e-844d-5fa08eb651c8.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"mealstogo-96a1f\",\"storageBucket\":\"mealstogo-96a1f.appspot.com\"}","GCLOUD_PROJECT":"mealstogo-96a1f","EVENTARC_CLOUD_EVENT_SOURCE":"projects/mealstogo-96a1f/locations/us-central1/services/geocode"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ea4c46bb8848f307058c952d182088f7b40dea7a"}}
+[debug] [2023-08-01T16:21:05.099Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions functionId=placesNearby
+[debug] [2023-08-01T16:21:05.099Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions {"name":"projects/mealstogo-96a1f/locations/us-central1/functions/placesNearby","buildConfig":{"runtime":"nodejs18","entryPoint":"placesNearby","source":{"storageSource":{"bucket":"gcf-v2-uploads-178224886437-us-central1","object":"529c1912-d059-451e-844d-5fa08eb651c8.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"mealstogo-96a1f\",\"storageBucket\":\"mealstogo-96a1f.appspot.com\"}","GCLOUD_PROJECT":"mealstogo-96a1f","EVENTARC_CLOUD_EVENT_SOURCE":"projects/mealstogo-96a1f/locations/us-central1/services/placesNearby"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ea4c46bb8848f307058c952d182088f7b40dea7a"}}
+[debug] [2023-08-01T16:21:06.487Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions 400
+[debug] [2023-08-01T16:21:06.488Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions {"error":{"code":400,"message":"Could not create Cloud Run service placesnearby. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Your current project quotas don't allow for the current max instances setting of 100. Either reduce this function's maximum instances, or request a quota increase on the underlying Cloud Run service at https://cloud.google.com/run/quotas. 
+[warn] !  functions: You can adjust the max instances value in your function's runtime options:
+	setGlobalOptions({maxInstances: 10}) 
+[error] Failed to create function projects/mealstogo-96a1f/locations/us-central1/functions/placesNearby
+[debug] [2023-08-01T16:21:06.502Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions 400
+[debug] [2023-08-01T16:21:06.502Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/mealstogo-96a1f/locations/us-central1/functions {"error":{"code":400,"message":"Could not create Cloud Run service geocode. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.","status":"INVALID_ARGUMENT"}}
+[warn] !  functions: Your current project quotas don't allow for the current max instances setting of 100. Either reduce this function's maximum instances, or request a quota increase on the underlying Cloud Run service at https://cloud.google.com/run/quotas. 
+[warn] !  functions: You can adjust the max instances value in your function's runtime options:
+	setGlobalOptions({maxInstances: 10}) 
+[error] Failed to create function projects/mealstogo-96a1f/locations/us-central1/functions/geocode
+[debug] [2023-08-01T16:21:06.511Z] Total Function Deployment time: 1438
+[debug] [2023-08-01T16:21:06.511Z] 2 Functions Deployed
+[debug] [2023-08-01T16:21:06.511Z] 2 Functions Errored
+[debug] [2023-08-01T16:21:06.511Z] 0 Function Deployments Aborted
+[debug] [2023-08-01T16:21:06.512Z] Average Function Deployment time: 1421.5
+[info] 
+[info] Functions deploy had errors with the following functions:
+	geocode(us-central1)
+	placesNearby(us-central1)
+[debug] [2023-08-01T16:21:06.516Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2023-08-01T16:21:06.516Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2023-08-01T16:21:06.525Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/geocode [none]
+[debug] [2023-08-01T16:21:06.528Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/places_nearby [none]
+[debug] [2023-08-01T16:21:06.531Z] >>> [apiv2][query] GET https://us.gcr.io/v2/mealstogo-96a1f/gcf/us-central1/tags/list [none]
+[debug] [2023-08-01T16:21:07.679Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/places_nearby 404
+[debug] [2023-08-01T16:21:07.679Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/places_nearby {"error":{"code":404,"message":"Package \"projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/places_nearby\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-08-01T16:21:07.687Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/geocode 404
+[debug] [2023-08-01T16:21:07.688Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/geocode {"error":{"code":404,"message":"Package \"projects/mealstogo-96a1f/locations/us-central1/repositories/gcf-artifacts/packages/geocode\" was not found.","status":"NOT_FOUND"}}
+[debug] [2023-08-01T16:21:07.844Z] <<< [apiv2][status] GET https://us.gcr.io/v2/mealstogo-96a1f/gcf/us-central1/tags/list 200
+[debug] [2023-08-01T16:21:07.845Z] <<< [apiv2][body] GET https://us.gcr.io/v2/mealstogo-96a1f/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"mealstogo-96a1f/gcf/us-central1","tags":[]}
+[debug] [2023-08-01T16:21:07.848Z] Could not find image for function projects/mealstogo-96a1f/locations/us-central1/functions/geocode
+[debug] [2023-08-01T16:21:07.848Z] Could not find image for function projects/mealstogo-96a1f/locations/us-central1/functions/placesNearby
+[debug] [2023-08-01T16:21:07.849Z] Functions deploy failed.
+[debug] [2023-08-01T16:21:07.850Z] {
+  "endpoint": {
+    "id": "placesNearby",
+    "project": "mealstogo-96a1f",
+    "region": "us-central1",
+    "entryPoint": "placesNearby",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"mealstogo-96a1f\",\"storageBucket\":\"mealstogo-96a1f.appspot.com\"}",
+      "GCLOUD_PROJECT": "mealstogo-96a1f",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/mealstogo-96a1f/locations/us-central1/services/placesNearby"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "ea4c46bb8848f307058c952d182088f7b40dea7a"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/mealstogo-96a1f/locations/us-central1/functions/placesNearby"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/mealstogo-96a1f/locations/us-central1/functions/placesNearby",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service placesnearby. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service placesnearby. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2023-08-01T16:21:07.851Z] {
+  "endpoint": {
+    "id": "geocode",
+    "project": "mealstogo-96a1f",
+    "region": "us-central1",
+    "entryPoint": "geocode",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"mealstogo-96a1f\",\"storageBucket\":\"mealstogo-96a1f.appspot.com\"}",
+      "GCLOUD_PROJECT": "mealstogo-96a1f",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/mealstogo-96a1f/locations/us-central1/services/geocode"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "ea4c46bb8848f307058c952d182088f7b40dea7a"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/mealstogo-96a1f/locations/us-central1/functions/geocode"
+    },
+    "exit": 1,
+    "message": "Failed to create function projects/mealstogo-96a1f/locations/us-central1/functions/geocode",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not create Cloud Run service geocode. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, Could not create Cloud Run service geocode. spec.template.spec.containers.resources.limits.cpu: Invalid value specified for cpu. For the specified value, maxScale may not exceed 10.\nConsider running your workload in a region with greater capacity, decreasing your requested cpu-per-instance, or requesting an increase in quota for this region if you are seeing sustained usage near this limit, see https://cloud.google.com/run/quotas. Your project may gain access to further scaling by adding billing information to your account.",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[error] Error: There was an error deploying functions:
+[error] - Error Failed to create function placesNearby in region us-central1
+[error] - Error Failed to create function geocode in region us-central1
