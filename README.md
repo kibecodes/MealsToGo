@@ -1,10 +1,10 @@
-Project Title
+# Project Title
 MealsToGo
 
-Project Overview
+# Project Overview
 React Native app for locating your favorite restaurants using google maps and stripe for card payments.
 
-Table of Contents
+# Table of Contents
 Installation
 Usage
 Features
