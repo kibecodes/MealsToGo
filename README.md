@@ -13,9 +13,9 @@ React Native app for locating your favorite restaurants using google maps and st
 • Contributing
 • License
 
-Installation
+# Installation
 bash
-Clone the repository
+# Clone the repository
 git clone https://github.com/kibecodes/MealsToGo.git
 
 # Install dependencies
@@ -38,7 +38,7 @@ Stripe for secure cashless payments.
 
 
 Screenshots
-Include screenshots of your app to give users a visual overview. You can create a separate section for this and embed images or provide links.
+<img width="949" alt="Screenshot 2024-01-11 135753" src="https://github.com/kibecodes/MealsToGo/assets/106477223/1e5585aa-0912-42f5-b979-ba029b92931e">
 
 Home Screen
 
