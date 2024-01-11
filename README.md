@@ -26,15 +26,15 @@ npm install or yarn install
 npm start or yarn start
 
 Usage
-Search for any restaurants by cities around the world.
-Click the restaurant card of your choice to get redirected to their official page for bookings and reservations.
-Look up all your best dishes, menu 
-Save your favourites joints for ease of search.
+- Search for any restaurants by cities around the world.
+- Click the restaurant card of your choice to get redirected to their official page for bookings and reservations.
+- Look up all your best dishes, menu 
+- Save your favourites joints for ease of search.
 
 Features
-All you can eat buffet with the extensive menu 
-Google Maps api for faster and reliable search.
-Stripe for secure cashless payments.
+- All you can eat buffet with the extensive menu 
+- Google Maps api for faster and reliable search.
+- Stripe for secure cashless payments.
 
 
 Screenshots
