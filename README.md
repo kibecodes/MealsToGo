@@ -36,24 +36,21 @@ Features
 - Google Maps api for faster and reliable search.
 - Stripe for secure cashless payments.
 
-
-Screenshots
+# Screenshots
 <img width="949" alt="Screenshot 2024-01-11 135753" src="https://github.com/kibecodes/MealsToGo/assets/106477223/1e5585aa-0912-42f5-b979-ba029b92931e">
+Register screen
+<img width="222" alt="Screenshot 2024-01-11 140021" src="https://github.com/kibecodes/MealsToGo/assets/106477223/794d510f-3f64-403a-b54d-c62f3bacbc35">
+Settings screen
+<img width="232" alt="Screenshot 2024-01-11 140514" src="https://github.com/kibecodes/MealsToGo/assets/106477223/3090ce1e-d2c1-4031-a2fc-cea5a6c65cbd">
 
-Home Screen
 
-Map View
-
-Payment Screen
 
 Technologies Used
-- **Google Maps API
-- **Stripe API
-- **expo: "~48.0.18",
-- **firebase: "^10.1.0",
-- **react: "18.2.0",
-- **react-native: "0.71.8",
-- **styled-components: "^6.0.5"
+- Google Maps API
+- Expo - platform for making universal Android, iOS and Web apps.
+- Firebase - backend utility.
+- React - frontend library.
+- React-native - cross platform capability.
 
 Contributing
 Any one who would like to contribute can fork and clone the repo and push their changes.
