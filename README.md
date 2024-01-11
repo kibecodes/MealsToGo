@@ -39,6 +39,9 @@ Features
 # Screenshots
 <img width="949" alt="Screenshot 2024-01-11 135753" src="https://github.com/kibecodes/MealsToGo/assets/106477223/1e5585aa-0912-42f5-b979-ba029b92931e">
 
+<img width="228" alt="Screenshot 2024-01-11 191507" src="https://github.com/kibecodes/MealsToGo/assets/106477223/d78b15f3-c1bb-4fc1-9c42-7cb0759504f4">
+Restaurant screen
+
 <img width="222" alt="Screenshot 2024-01-11 140021" src="https://github.com/kibecodes/MealsToGo/assets/106477223/794d510f-3f64-403a-b54d-c62f3bacbc35">
 Register screen
 
