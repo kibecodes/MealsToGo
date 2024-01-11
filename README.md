@@ -39,11 +39,11 @@ Features
 # Screenshots
 <img width="949" alt="Screenshot 2024-01-11 135753" src="https://github.com/kibecodes/MealsToGo/assets/106477223/1e5585aa-0912-42f5-b979-ba029b92931e">
 
-Register screen
 <img width="222" alt="Screenshot 2024-01-11 140021" src="https://github.com/kibecodes/MealsToGo/assets/106477223/794d510f-3f64-403a-b54d-c62f3bacbc35">
+Register screen
 
-Settings screen
 <img width="232" alt="Screenshot 2024-01-11 140514" src="https://github.com/kibecodes/MealsToGo/assets/106477223/3090ce1e-d2c1-4031-a2fc-cea5a6c65cbd">
+Settings screen
 
 
 
