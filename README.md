@@ -13,9 +13,9 @@ React Native app for locating your favorite restaurants using google maps and st
 • Contributing
 • License
 
-# Installation
+Installation
 bash
-# Clone the repository
+Clone the repository
 git clone https://github.com/kibecodes/MealsToGo.git
 
 # Install dependencies
