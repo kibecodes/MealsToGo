@@ -50,6 +50,7 @@ Settings screen
 
 
 
+
 Technologies Used
 - Google Maps API
 - Expo - platform for making universal Android, iOS and Web apps.
