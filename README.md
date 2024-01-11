@@ -5,13 +5,13 @@ MealsToGo
 React Native app for locating your favorite restaurants using google maps and stripe for card payments.
 
 # Table of Contents
-Installation
-Usage
-Features
-Screenshots
-Technologies Used
-Contributing
-License
+• Installation
+• Usage
+• Features
+• Screenshots
+• Technologies Used
+• Contributing
+• License
 
 Installation
 bash
